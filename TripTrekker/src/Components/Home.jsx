@@ -1,67 +1,101 @@
 import React from "react";
 import SliderComponent from "./SliderComponent";
 
-const Home = () =>{
+const Home = () => {
+  return (
+    <>
+      <SliderComponent />
 
-    return (
-        <>
-            <SliderComponent/>
-            <div className="review">
-                <div className="box1">
-                    <img src="src/assets/user.jpg" alt="user"/>
-                    <h4> 3000+ SUCCESSFULL TRIPS</h4>
-                    <p>A proven history of delivering unparalleled travel experiences with over 3000 meticulously planned journeys.</p>
-                </div>
-                <div className="box1">
-                    <img src="src/assets/travel.jpg" alt="experience"/>
-                    <h4>HANDCRAFTED EXPERIENCE</h4>
-                    <p>Curated itineraries tailored to individual preferences and desires, with impeccable attention to detail in every aspect of the voyage, dedicated to crafting extraordinary moments and indelible memories.</p>
-                </div>
-                <div className="box1">
-                    <img src="src/assets/rating.jpg" alt="travel"/>
-                    <h4>EXTREMELY HAPPY TRAVELLERS</h4>
-                    <p>Exceptional customer satisfaction and a loyal client base, with glowing reviews and heartfelt testimonials from ecstatic travelers, devoted to surpassing expectations and ensuring an exquisite travel experience.</p>
-                </div>
-            </div>
-            <h1>TOP SELLERS...</h1>
-            <div className="topseller">
-                <div className="grid-item">
-                    <img src="https://imagedelivery.net/0LMYosKeo5o-LXOCjdKUuA/tourscanner.com/2018/05/colosseo.jpg/w=9999" alt="rome"/>
-                    <span>Rome</span>
-                </div>
-                <div className="grid-item">
-                    <img src="https://cdn.londonandpartners.com/visit/general-london/areas/river/76709-640x360-houses-of-parliament-and-london-eye-on-thames-from-above-640.jpg" alt="london"/>
-                    <span>London</span>
-                </div>
-                <div className="grid-item">
-                    <img src="https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/medium_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900" alt="paris"/>
-                    <span>Paris</span>
-                </div>
-                <div className="grid-item">
-                    <img src="https://dynamic.tourtravelworld.com/blog_images/the-13-most-amazing-places-to-visit-in-dubai-20170421033439.jpg" alt="dubai"/>
-                    <span>Dubai</span>
-                </div>
-                
-                <div className="grid-item">
-                    <img src="https://media.istockphoto.com/id/653953140/photo/hindu-temple-in-bali.webp?b=1&s=170667a&w=0&k=20&c=-Zo3LO0CI8fbtwkUUH50QJ0wtVjzGj1aCtfRIHDI5uQ=" alt="bali"/>
-                    <span>Bali</span>
-                </div>
-                <div className="grid-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdkLIDelor2u2lSO_PooMIuC1o7ExGgM8vpA&s" alt="goa"/>
-                    <span>Goa</span>
-                </div>
-                <div className="grid-item">
-                    <img src="https://static.toiimg.com/thumb/msid-81672797,width-748,height-499,resizemode=4,imgsize-448902/.jpg" alt="himalayas"/>
-                    <span>Jammu & Kashmir</span>
-                </div>
-                <div className="grid-item">
-                    <img src="https://iresizer.devops.arabiaweather.com/resize?url=https://adminassets.devops.arabiaweather.com/sites/default/files/malaysia-111avril.jpg&size=850x530&force_webp=1" alt="malaysia"/>
-                    <span>Malaysia</span>
-                </div>
+      {/* Review Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12 max-w-7xl mx-auto">
+        <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img
+            src="src/assets/user.jpg"
+            alt="user"
+            className="w-20 h-20 mb-4 rounded-full object-cover"
+          />
+          <h4 className="text-lg font-bold text-gray-800 mb-3">
+            3000+ SUCCESSFUL TRIPS
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            A proven history of delivering unparalleled travel experiences with
+            over 3000 meticulously planned journeys.
+          </p>
+        </div>
 
-            </div>
-        </>
-    )
-}
+        <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img
+            src="src/assets/travel.jpg"
+            alt="experience"
+            className="w-20 h-20 mb-4 rounded-full object-cover"
+          />
+          <h4 className="text-lg font-bold text-gray-800 mb-3">
+            HANDCRAFTED EXPERIENCE
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Curated itineraries tailored to individual preferences and desires,
+            with impeccable attention to detail in every aspect of the voyage,
+            dedicated to crafting extraordinary moments and indelible memories.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img
+            src="src/assets/rating.jpg"
+            alt="travel"
+            className="w-20 h-20 mb-4 rounded-full object-cover"
+          />
+          <h4 className="text-lg font-bold text-gray-800 mb-3">
+            EXTREMELY HAPPY TRAVELLERS
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Exceptional customer satisfaction and a loyal client base, with
+            glowing reviews and heartfelt testimonials from ecstatic travelers,
+            devoted to surpassing expectations and ensuring an exquisite travel
+            experience.
+          </p>
+        </div>
+      </div>
+
+      {/* Heading */}
+      <div className="text-center py-8 px-6">
+        <h1 className="text-4xl font-bold text-gray-800 tracking-wide">
+          TOP SELLERS...
+        </h1>
+      </div>
+
+      <section className="relative h-[90vh] flex items-center justify-center text-center">
+        {/* Background Image */}
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80"
+          alt="Beach Resort"
+          className="absolute inset-0 w-full h-full object-cover brightness-75"
+        />
+
+        {/* Overlay (optional soft dark filter) */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Content */}
+        <div className="relative z-10 text-white px-4">
+          <h3 className="text-lg sm:text-xl font-semibold mb-2">
+            Explore the World, Create Memories
+          </h3>
+          <h1 className="text-4xl sm:text-6xl font-bold mb-8">
+            Embrace Adventure
+          </h1>
+
+          <div className="flex justify-center gap-4">
+            <button className="px-6 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-black transition duration-300">
+              View More
+            </button>
+            <button className="px-6 py-3 bg-green-600 border-2 border-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition duration-300">
+              Find Packages
+            </button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Home;
